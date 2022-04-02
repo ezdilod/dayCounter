@@ -3,6 +3,7 @@ const outputEl = document.querySelector("#outputDate");
 const outputWeekNameEl = document.querySelector("#outputWeekName");
 const outputDayCountEl = document.querySelector("#outputDayCount");
 const inputDateEl = document.getElementById("inputDate");
+const userDateEl = document.querySelector("#userDate");
 
 const weekDayName = [
   "Sunday",
@@ -26,9 +27,15 @@ function getUserDate() {
   let dayCount = birthDay.getTime() - toDay.getTime();
   dayCount = Math.round(dayCount / 1000 / 60 / 60 / 24);
 
+  let userDateShow = inputDateEl.value;
+  userDateEl.innerHTML = userDateShow;
+
   //show the Date in the DOM
   outputDayCountEl.innerHTML = dayCount + " Days";
+
+  inputDateEl.value = ""; // clear input field
 }
+
 //show the Date in the DOM
 outputEl.innerHTML = weekDay;
 outputWeekNameEl.innerHTML = date.toLocaleDateString();

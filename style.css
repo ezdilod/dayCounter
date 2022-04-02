@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1.2rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dateClass {
+  display: flex;
+}
+
+.dateClass .currentDate {
+  padding: 2rem;
+}
+
+.dateClass .userDate {
+  padding: 2rem;
+}
+
+.outputDayCount {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+button {
+  width: 80px;
+  margin: 0.5rem;
+  background-color: blueviolet;
+}

@@ -4,15 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
   <body>
-    <div id="outputDate"></div>
-    <div id="outputWeekName"></div>
-    <div id="outputDayCount">count Days for you</div>
+    <div class="dateClass">
+      <div class="currentDate">
+        <div id="outputDate"></div>
+        <div id="outputWeekName"></div>
+      </div>
+    <div class="userDate" id="userDate">User Date</div>
+  </div>
+    
+    <div class="outputDayCount" id="outputDayCount">count Days for you</div>
+    
+
     <form action="inputForm"></form>
-    <button type="submit" onclick="getUserDate()">Save</button>
+   
     <input id="inputDate" type="date" name="inputDate" />
+     <button type="submit" onclick="getUserDate()">Save</button>
     </form>
     <script src="practis.js"></script>
   </body>
