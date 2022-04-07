@@ -4,6 +4,7 @@ const outputWeekNameEl = document.querySelector("#outputWeekName");
 const outputDayCountEl = document.querySelector("#outputDayCount");
 const inputDateEl = document.getElementById("inputDate");
 const userDateEl = document.querySelector("#userDate");
+const userDateName = document.querySelector("#userDayName");
 
 const weekDayName = [
   "Sunday",
@@ -34,8 +35,19 @@ function getUserDate() {
   outputDayCountEl.innerHTML = dayCount + " Days";
 
   inputDateEl.value = ""; // clear input field
+
+  //get the weekday of userDate input
+  function getDayNameUserInput(dateStr, locale) {
+    let date = new Date(dateStr);
+    return date.toLocaleDateString(locale, { weekday: "long" });
+  }
+  let dateStr = userDate;
+  let day = getDayNameUserInput(dateStr, "de-DE");
+  console.log(day);
 }
 
 //show the Date in the DOM
 outputEl.innerHTML = weekDay;
 outputWeekNameEl.innerHTML = date.toLocaleDateString();
+
+//!anzeige user datum name
