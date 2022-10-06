@@ -6,32 +6,42 @@
 }
 
 body {
-  width: 100%;
+  width: auto;
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: #282c34;
+  margin: 0 auto;
 }
 
 .dateClass {
+  width: 360px;
   display: flex;
-  margin-top: 2rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .outputDayCount {
   border: 1px solid black;
   padding: 0.5rem;
   border-radius: 5px;
-  margin-top: 5rem;
 }
 
 .dateClass .currentDate {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
 }
 
 .dateClass .userDate {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .outputDayCount {
@@ -44,19 +54,24 @@ body {
 
 input {
   margin: 1.5rem;
-  background-color: grey;
-  border: none;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ff8c38;
+  padding: 0.5rem;
+  color: black;
+  border-radius: 10px;
 }
 
 button {
   width: 80px;
   margin: 0.5rem;
-  background-color: blueviolet;
+  background-color: #367aff;
   padding: 0.5rem;
-  border-radius: 5px;
+  border-radius: 10px;
+  border: 1px solid #ff8c38;
   color: white;
 }
-
-#outputWeekName {
-  margin-top: 0.5rem;
+button:hover {
+  background-color: #ff8c38;
+  border: 1px solid #367aff;
+  cursor: pointer;
 }

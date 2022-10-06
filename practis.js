@@ -42,12 +42,12 @@ function getUserDate() {
     return date.toLocaleDateString(locale, { weekday: "long" });
   }
   let dateStr = userDate;
-  let day = getDayNameUserInput(dateStr, "de-DE");
+  let day = getDayNameUserInput(dateStr, "en-US");
   console.log(day);
+  // get user Date and translate to Weekday
+  userDateName.innerHTML = day;
 }
 
 //show the Date in the DOM
 outputEl.innerHTML = weekDay;
 outputWeekNameEl.innerHTML = date.toLocaleDateString();
-
-//!anzeige user datum name
